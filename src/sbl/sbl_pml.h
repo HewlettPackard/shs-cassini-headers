@@ -591,6 +591,26 @@
 #define SS2_PORT_PML_STS_SERDES_PMD_RX_LOCK_GET(a)                                   C_GET(a, ss2_port_pml_sts_serdes, pmd_rx_lock)
 #define SS2_PORT_PML_STS_SERDES_PMD_SIGNAL_DETECTGET(a)                              C_GET(a, ss2_port_pml_sts_serdes, pmd_signal_detect)
 
+#define SS2_PORT_PML_ERR_FLG_WORD1_LLR_REPLAY_AT_MAX_0_GET(a)                        C_WORD_GET(a, ss2_port_pml_err_flg, llr_replay_at_max_0, 1)
+#define SS2_PORT_PML_ERR_FLG_WORD1_LLR_REPLAY_AT_MAX_1_GET(a)                        C_WORD_GET(a, ss2_port_pml_err_flg, llr_replay_at_max_1, 1)
+#define SS2_PORT_PML_ERR_FLG_WORD1_LLR_REPLAY_AT_MAX_2_GET(a)                        C_WORD_GET(a, ss2_port_pml_err_flg, llr_replay_at_max_2, 1)
+#define SS2_PORT_PML_ERR_FLG_WORD1_LLR_REPLAY_AT_MAX_3_GET(a)                        C_WORD_GET(a, ss2_port_pml_err_flg, llr_replay_at_max_3, 1)
+
+#define SS2_PORT_PML_ERR_FLG_WORD1_PCS_LINK_DOWN_0_GET(a)                            C_WORD_GET(a, ss2_port_pml_err_flg, pcs_link_down_0, 1)
+#define SS2_PORT_PML_ERR_FLG_WORD1_PCS_LINK_DOWN_1_GET(a)                            C_WORD_GET(a, ss2_port_pml_err_flg, pcs_link_down_1, 1)
+#define SS2_PORT_PML_ERR_FLG_WORD1_PCS_LINK_DOWN_2_GET(a)                            C_WORD_GET(a, ss2_port_pml_err_flg, pcs_link_down_2, 1)
+#define SS2_PORT_PML_ERR_FLG_WORD1_PCS_LINK_DOWN_3_GET(a)                            C_WORD_GET(a, ss2_port_pml_err_flg, pcs_link_down_3, 1)
+
+#define SS2_PORT_PML_ERR_FLG_WORD1_PCS_LINK_DOWN_LF_0_GET(a)                         C_WORD_GET(a, ss2_port_pml_err_flg, pcs_link_down_lf_0, 1)
+#define SS2_PORT_PML_ERR_FLG_WORD1_PCS_LINK_DOWN_LF_1_GET(a)                         C_WORD_GET(a, ss2_port_pml_err_flg, pcs_link_down_lf_1, 1)
+#define SS2_PORT_PML_ERR_FLG_WORD1_PCS_LINK_DOWN_LF_2_GET(a)                         C_WORD_GET(a, ss2_port_pml_err_flg, pcs_link_down_lf_2, 1)
+#define SS2_PORT_PML_ERR_FLG_WORD1_PCS_LINK_DOWN_LF_3_GET(a)                         C_WORD_GET(a, ss2_port_pml_err_flg, pcs_link_down_lf_3, 1)
+
+#define SS2_PORT_PML_ERR_FLG_WORD1_PCS_LINK_DOWN_RF_0_GET(a)                         C_WORD_GET(a, ss2_port_pml_err_flg, pcs_link_down_rf_0, 1)
+#define SS2_PORT_PML_ERR_FLG_WORD1_PCS_LINK_DOWN_RF_1_GET(a)                         C_WORD_GET(a, ss2_port_pml_err_flg, pcs_link_down_rf_1, 1)
+#define SS2_PORT_PML_ERR_FLG_WORD1_PCS_LINK_DOWN_RF_2_GET(a)                         C_WORD_GET(a, ss2_port_pml_err_flg, pcs_link_down_rf_2, 1)
+#define SS2_PORT_PML_ERR_FLG_WORD1_PCS_LINK_DOWN_RF_3_GET(a)                         C_WORD_GET(a, ss2_port_pml_err_flg, pcs_link_down_rf_3, 1)
+
 #define SS2_PORT_PML_LLR_STATE_T_OFF_LLR                                             C2_HNI_PML_OFF_LLR
 #define SS2_PORT_PML_LLR_STATE_T_INIT                                                C2_HNI_PML_INIT
 #define SS2_PORT_PML_LLR_STATE_T_ADVANCE                                             C2_HNI_PML_ADVANCE

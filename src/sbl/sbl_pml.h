@@ -467,6 +467,7 @@
 #define SS2_PORT_PML_CFG_LLR_CF_RATES_LOOP_TIMING_PERIOD_UPDATE(a,b)                 C_UPDATE(a,b,ss2_port_pml_cfg_llr_cf_rates, loop_timing_period)
 #define SS2_PORT_PML_CFG_LLR_CF_SMAC_CTL_FRAME_SMAC_UPDATE(a,b)                      C_UPDATE(a,b,ss2_port_pml_cfg_llr_cf_smac,ctl_frame_smac)
 #define SS2_PORT_PML_CFG_LLR_CF_ETYPE_CTL_FRAME_ETHERTYPE_UPDATE(a,b)                C_UPDATE(a,b,ss2_port_pml_cfg_llr_cf_etype,ctl_frame_ethertype)
+#define SS2_PORT_PML_CFG_LLR_SM_REPLAY_CT_MAX_GET(a)                                 C_GET(a,ss2_port_pml_cfg_llr_sm,replay_ct_max)
 #define SS2_PORT_PML_CFG_LLR_SM_REPLAY_CT_MAX_UPDATE(a,b)                            C_UPDATE(a,b,ss2_port_pml_cfg_llr_sm,replay_ct_max)
 #define SS2_PORT_PML_CFG_LLR_SM_REPLAY_TIMER_MAX_UPDATE(a,b)                         C_UPDATE(a,b,ss2_port_pml_cfg_llr_sm,replay_timer_max)
 #define SS2_PORT_PML_CFG_LLR_SM_RETRY_THRESHOLD_UPDATE(a,b)                          C_UPDATE(a,b,ss2_port_pml_cfg_llr_sm,retry_threshold)

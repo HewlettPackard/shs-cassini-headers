@@ -467,6 +467,7 @@
 #define SS2_PORT_PML_CFG_LLR_CF_RATES_LOOP_TIMING_PERIOD_UPDATE(a,b)                 C_UPDATE(a,b,ss2_port_pml_cfg_llr_cf_rates, loop_timing_period)
 #define SS2_PORT_PML_CFG_LLR_CF_SMAC_CTL_FRAME_SMAC_UPDATE(a,b)                      C_UPDATE(a,b,ss2_port_pml_cfg_llr_cf_smac,ctl_frame_smac)
 #define SS2_PORT_PML_CFG_LLR_CF_ETYPE_CTL_FRAME_ETHERTYPE_UPDATE(a,b)                C_UPDATE(a,b,ss2_port_pml_cfg_llr_cf_etype,ctl_frame_ethertype)
+#define SS2_PORT_PML_CFG_LLR_SM_REPLAY_CT_MAX_GET(a)                                 C_GET(a,ss2_port_pml_cfg_llr_sm,replay_ct_max)
 #define SS2_PORT_PML_CFG_LLR_SM_REPLAY_CT_MAX_UPDATE(a,b)                            C_UPDATE(a,b,ss2_port_pml_cfg_llr_sm,replay_ct_max)
 #define SS2_PORT_PML_CFG_LLR_SM_REPLAY_TIMER_MAX_UPDATE(a,b)                         C_UPDATE(a,b,ss2_port_pml_cfg_llr_sm,replay_timer_max)
 #define SS2_PORT_PML_CFG_LLR_SM_RETRY_THRESHOLD_UPDATE(a,b)                          C_UPDATE(a,b,ss2_port_pml_cfg_llr_sm,retry_threshold)
@@ -493,6 +494,7 @@
 
 #define SS2_PORT_PML_CFG_RX_MAC_FLIT_PACKING_CNT_UPDATE(a,b)                         C_UPDATE(a,b,ss2_port_pml_cfg_rx_mac,flit_packing_cnt)
 #define SS2_PORT_PML_CFG_RX_MAC_SUBPORT_MAC_OPERATIONAL_UPDATE(a,b)                  C_UPDATE(a,b,ss2_port_pml_cfg_rx_mac_subport,mac_operational)
+#define SS2_PORT_PML_CFG_RX_MAC_SUBPORT_MAC_OPERATIONAL_GET(a)                       C_GET(a, ss2_port_pml_cfg_rx_mac_subport, mac_operational)
 #define SS2_PORT_PML_CFG_RX_MAC_SUBPORT_SHORT_PREAMBLE_UPDATE(a,b)                   C_UPDATE(a,b,ss2_port_pml_cfg_rx_mac_subport,short_preamble)
 
 #define SS2_PORT_PML_CFG_RX_PCS_SUBPORT_ENABLE_CTL_OS_UPDATE(a,b)                    C_UPDATE(a,b,ss2_port_pml_cfg_rx_pcs_subport,enable_ctl_os)
@@ -513,6 +515,7 @@
 #define SS2_PORT_PML_CFG_TX_MAC_MAC_PAD_IDLE_THRESH_UPDATE(a,b)                      C_UPDATE(a,b,ss2_port_pml_cfg_tx_mac,mac_pad_idle_thresh)
 #define SS2_PORT_PML_CFG_TX_MAC_IFG_MODE_UPDATE(a,b)                                 C_UPDATE(a,b,ss2_port_pml_cfg_tx_mac,ifg_mode)
 #define SS2_PORT_PML_CFG_TX_MAC_SUBPORT_MAC_OPERATIONAL_UPDATE(a,b)                  C_UPDATE(a,b,ss2_port_pml_cfg_tx_mac_subport,mac_operational)
+#define SS2_PORT_PML_CFG_TX_MAC_SUBPORT_MAC_OPERATIONAL_GET(a)                       C_GET(a, ss2_port_pml_cfg_tx_mac_subport, mac_operational)
 #define SS2_PORT_PML_CFG_TX_MAC_SUBPORT_MAC_CDT_THRESH_UPDATE(a,b)                   C_UPDATE(a,b,ss2_port_pml_cfg_tx_mac_subport,mac_cdt_thresh)
 #define SS2_PORT_PML_CFG_TX_MAC_SUBPORT_MAC_CDT_INIT_VAL_UPDATE(a,b)                 C_UPDATE(a,b,ss2_port_pml_cfg_tx_mac_subport,mac_cdt_init_val)
 #define SS2_PORT_PML_CFG_TX_MAC_SUBPORT_PCS_CREDITS_UPDATE(a,b)                      C_UPDATE(a,b,ss2_port_pml_cfg_tx_mac_subport,pcs_credits)
@@ -588,6 +591,26 @@
 #define SS2_PORT_PML_STS_SERDES_PMD_RX_CLK_VLD_GET(a)                                C_GET(a, ss2_port_pml_sts_serdes, pmd_rx_clk_vld)
 #define SS2_PORT_PML_STS_SERDES_PMD_RX_LOCK_GET(a)                                   C_GET(a, ss2_port_pml_sts_serdes, pmd_rx_lock)
 #define SS2_PORT_PML_STS_SERDES_PMD_SIGNAL_DETECTGET(a)                              C_GET(a, ss2_port_pml_sts_serdes, pmd_signal_detect)
+
+#define SS2_PORT_PML_ERR_FLG_WORD1_LLR_REPLAY_AT_MAX_0_GET(a)                        C_WORD_GET(a, ss2_port_pml_err_flg, llr_replay_at_max_0, 1)
+#define SS2_PORT_PML_ERR_FLG_WORD1_LLR_REPLAY_AT_MAX_1_GET(a)                        C_WORD_GET(a, ss2_port_pml_err_flg, llr_replay_at_max_1, 1)
+#define SS2_PORT_PML_ERR_FLG_WORD1_LLR_REPLAY_AT_MAX_2_GET(a)                        C_WORD_GET(a, ss2_port_pml_err_flg, llr_replay_at_max_2, 1)
+#define SS2_PORT_PML_ERR_FLG_WORD1_LLR_REPLAY_AT_MAX_3_GET(a)                        C_WORD_GET(a, ss2_port_pml_err_flg, llr_replay_at_max_3, 1)
+
+#define SS2_PORT_PML_ERR_FLG_WORD1_PCS_LINK_DOWN_0_GET(a)                            C_WORD_GET(a, ss2_port_pml_err_flg, pcs_link_down_0, 1)
+#define SS2_PORT_PML_ERR_FLG_WORD1_PCS_LINK_DOWN_1_GET(a)                            C_WORD_GET(a, ss2_port_pml_err_flg, pcs_link_down_1, 1)
+#define SS2_PORT_PML_ERR_FLG_WORD1_PCS_LINK_DOWN_2_GET(a)                            C_WORD_GET(a, ss2_port_pml_err_flg, pcs_link_down_2, 1)
+#define SS2_PORT_PML_ERR_FLG_WORD1_PCS_LINK_DOWN_3_GET(a)                            C_WORD_GET(a, ss2_port_pml_err_flg, pcs_link_down_3, 1)
+
+#define SS2_PORT_PML_ERR_FLG_WORD1_PCS_LINK_DOWN_LF_0_GET(a)                         C_WORD_GET(a, ss2_port_pml_err_flg, pcs_link_down_lf_0, 1)
+#define SS2_PORT_PML_ERR_FLG_WORD1_PCS_LINK_DOWN_LF_1_GET(a)                         C_WORD_GET(a, ss2_port_pml_err_flg, pcs_link_down_lf_1, 1)
+#define SS2_PORT_PML_ERR_FLG_WORD1_PCS_LINK_DOWN_LF_2_GET(a)                         C_WORD_GET(a, ss2_port_pml_err_flg, pcs_link_down_lf_2, 1)
+#define SS2_PORT_PML_ERR_FLG_WORD1_PCS_LINK_DOWN_LF_3_GET(a)                         C_WORD_GET(a, ss2_port_pml_err_flg, pcs_link_down_lf_3, 1)
+
+#define SS2_PORT_PML_ERR_FLG_WORD1_PCS_LINK_DOWN_RF_0_GET(a)                         C_WORD_GET(a, ss2_port_pml_err_flg, pcs_link_down_rf_0, 1)
+#define SS2_PORT_PML_ERR_FLG_WORD1_PCS_LINK_DOWN_RF_1_GET(a)                         C_WORD_GET(a, ss2_port_pml_err_flg, pcs_link_down_rf_1, 1)
+#define SS2_PORT_PML_ERR_FLG_WORD1_PCS_LINK_DOWN_RF_2_GET(a)                         C_WORD_GET(a, ss2_port_pml_err_flg, pcs_link_down_rf_2, 1)
+#define SS2_PORT_PML_ERR_FLG_WORD1_PCS_LINK_DOWN_RF_3_GET(a)                         C_WORD_GET(a, ss2_port_pml_err_flg, pcs_link_down_rf_3, 1)
 
 #define SS2_PORT_PML_LLR_STATE_T_OFF_LLR                                             C2_HNI_PML_OFF_LLR
 #define SS2_PORT_PML_LLR_STATE_T_INIT                                                C2_HNI_PML_INIT

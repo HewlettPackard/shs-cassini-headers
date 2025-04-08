@@ -26,6 +26,9 @@
 
 #define aarch64_dmb(opt) asm volatile ("dmb " #opt ::: "memory")
 
+
+#define sfence() aarch64_dmb(oshst)
+
 /* Data memory barrier with outer shareability is enough to ensure write
  * ordering between host memory command writes and write pointer doorbell
  * writes.

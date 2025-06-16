@@ -487,6 +487,7 @@
 #define SS2_PORT_PML_CFG_PCS_AUTONEG_NEXT_PAGE_LOADED_UPDATE(a,b)                    C_UPDATE(a,b,ss2_port_pml_cfg_pcs_autoneg, next_page_loaded)
 
 #define SS2_PORT_PML_CFG_PCS_ENABLE_AUTO_LANE_DEGRADE_UPDATE(a,b)                    C_UPDATE(a,b,ss2_port_pml_cfg_pcs,enable_auto_lane_degrade)
+#define SS2_PORT_PML_CFG_PCS_ENABLE_AUTO_LANE_DEGRADE_GET(a)                         C_GET(a,ss2_port_pml_cfg_pcs,enable_auto_lane_degrade)
 #define SS2_PORT_PML_CFG_PCS_PCS_MODE_UPDATE(a,b)                                    C_UPDATE(a,b,ss2_port_pml_cfg_pcs,pcs_mode)
 #define SS2_PORT_PML_CFG_PCS_TIMESTAMP_SHIFT_UPDATE(a,b)                             C_UPDATE(a,b,ss2_port_pml_cfg_pcs, timestamp_shift)
 #define SS2_PORT_PML_CFG_PCS_SUBPORT_PCS_ENABLE_UPDATE(a,b)                          C_UPDATE(a,b,ss2_port_pml_cfg_pcs_subport, pcs_enable)
@@ -530,6 +531,7 @@
 #define SS2_PORT_PML_CFG_TX_PCS_LANE_3_SOURCE_UPDATE(a,b)                            C_UPDATE(a,b,ss2_port_pml_cfg_tx_pcs,lane_3_source)
 #define SS2_PORT_PML_CFG_TX_PCS_ALLOW_AUTO_DEGRADE_UPDATE(a,b)                       C_UPDATE(a,b,ss2_port_pml_cfg_tx_pcs,allow_auto_degrade)
 #define SS2_PORT_PML_CFG_TX_PCS_SUBPORT_GEARBOX_CREDITS_UPDATE(a,b)                  C_UPDATE(a,b,ss2_port_pml_cfg_tx_pcs_subport,gearbox_credits)
+#define SS2_PORT_PML_CFG_TX_PCS_KEEP_ALL_LANES_ACTIVE_UPDATE(a,b)                    C_UPDATE(a,b,ss2_port_pml_cfg_tx_pcs,keep_all_lanes_active)
 
 #define SS2_PORT_PML_ERR_INFO_PCS_TX_DP_TX_CDC_UNDERRUN_UPDATE(a,b)                  C_UPDATE(a,b,ss2_port_pml_err_info_pcs_tx_dp,tx_cdc_underrun)
 
@@ -611,6 +613,9 @@
 #define SS2_PORT_PML_ERR_FLG_WORD1_PCS_LINK_DOWN_RF_1_GET(a)                         C_WORD_GET(a, ss2_port_pml_err_flg, pcs_link_down_rf_1, 1)
 #define SS2_PORT_PML_ERR_FLG_WORD1_PCS_LINK_DOWN_RF_2_GET(a)                         C_WORD_GET(a, ss2_port_pml_err_flg, pcs_link_down_rf_2, 1)
 #define SS2_PORT_PML_ERR_FLG_WORD1_PCS_LINK_DOWN_RF_3_GET(a)                         C_WORD_GET(a, ss2_port_pml_err_flg, pcs_link_down_rf_3, 1)
+
+#define SS2_PORT_PML_STS_PCS_LANE_DEGRADE_WORD0_LP_PLS_AVAILABLE_GET(a)              C_WORD_GET(a, ss2_port_pml_sts_pcs_lane_degrade, lp_pls_available, 0)
+#define SS2_PORT_PML_STS_PCS_LANE_DEGRADE_WORD0_RX_PLS_AVAILABLE_GET(a)              C_WORD_GET(a, ss2_port_pml_sts_pcs_lane_degrade, rx_pls_available, 0)
 
 #define SS2_PORT_PML_LLR_STATE_T_OFF_LLR                                             C2_HNI_PML_OFF_LLR
 #define SS2_PORT_PML_LLR_STATE_T_INIT                                                C2_HNI_PML_INIT

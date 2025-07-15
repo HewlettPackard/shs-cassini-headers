@@ -539,6 +539,9 @@
 #define SS2_PORT_PML_STS_LLR_LLR_STATE_GET(a)                                        C_GET(a, ss2_port_pml_sts_llr, llr_state)
 
 #define SS2_PORT_PML_STS_RX_PCS_SUBPORT_ALIGN_STATUS_GET(a)                          C_GET(a, ss2_port_pml_sts_rx_pcs_subport, align_status)
+#define SS2_PORT_PML_STS_RX_PCS_SUBPORT_FAULT_GET(a)                                 C_GET(a, ss2_port_pml_sts_rx_pcs_subport, fault)
+#define SS2_PORT_PML_STS_RX_PCS_SUBPORT_LOCAL_FAULT_GET(a)                           C_GET(a, ss2_port_pml_sts_rx_pcs_subport, local_fault)
+#define SS2_PORT_PML_STS_RX_PCS_SUBPORT_HI_SER_GET(a)                                C_GET(a, ss2_port_pml_sts_rx_pcs_subport, hi_ser)
 
 #define SS2_PORT_PML_STS_PCS_AUTONEG_BASE_PAGE_LP_BASE_PAGE_GET(a)                   C_GET(a, ss2_port_pml_sts_pcs_autoneg_base_page, lp_base_page)
 #define SS2_PORT_PML_STS_PCS_AUTONEG_BASE_PAGE_LP_ABILITY_GET(a)                     C_GET(a, ss2_port_pml_sts_pcs_autoneg_base_page, lp_ability)

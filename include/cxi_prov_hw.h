@@ -635,7 +635,7 @@ static inline void cxi_cq_update_wp(struct cxi_cq *cq)
 		struct cxi_cmd32 *cmd = &cq->cmds32[cq->wp32];
 
 		/* Command opcode and DFA must be cleared */
-		memset(cmd->pad, 0, 8);
+		memset(cmd->pad, 0, sizeof(uint64_t));
 		__cxi_cq_advance_wp(cq, C_CMD_SIZE_32B);
 	}
 

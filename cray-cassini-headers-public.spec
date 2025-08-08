@@ -1,6 +1,6 @@
 # Copyright 2021,2024 Hewlett Packard Enterprise Development LP
 Name:           cray-cassini-headers
-Version:        2.0.0
+Version:        1.1.2
 Release:        %(echo ${BUILD_METADATA})
 Summary:        Cassini Headers
 License:        Dual GPLv2/BSD

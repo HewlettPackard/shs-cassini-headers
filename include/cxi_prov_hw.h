@@ -1529,14 +1529,18 @@ static inline void cxi_cq_init(struct cxi_cq *cq, struct cxi_cmd64 *cmds,
 	cq->rp32 = cq->wp32;
 
 	/* Setting status pointer sets the commands pointer. */
-	cq->status = (struct c_cq_status *)&cmds[0];
-	cq->status->rd_ptr = C_CQ_FIRST_WR_PTR;
-	cq->status->return_code = C_RC_OK;
+	if (cmds) {
+		cq->status = (struct c_cq_status *)&cmds[0];
+		cq->status->rd_ptr = C_CQ_FIRST_WR_PTR;
+		cq->status->return_code = C_RC_OK;
+	}
 
-	cq->wp_addr = (uint64_t *)launch_addr;
-	cq->ll_64 = (uint8_t *)la->ll_wr64a0123;
-	cq->ll_128a = (uint8_t *)la->ll_wr128a02;
-	cq->ll_128u = (uint8_t *)la->ll_wr128a13;
+	if (launch_addr) {
+		cq->wp_addr = (uint64_t *)launch_addr;
+		cq->ll_64 = (uint8_t *)la->ll_wr64a0123;
+		cq->ll_128a = (uint8_t *)la->ll_wr128a02;
+		cq->ll_128u = (uint8_t *)la->ll_wr128a13;
+	}
 	cq->idx = idx;
 }
 

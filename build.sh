@@ -7,8 +7,6 @@ set -Eeuox pipefail
 
 CE_BUILD_SCRIPT_REPO=hpc-shs-ce-devops
 
-CE_CONFIG_BRANCH=encassini-2348
-
 # Use appropriate ce-devops branch
 if [[ -n "${BRANCH_NAME:-}" && "$BRANCH_NAME" =~ "release/shs-" ]]; then
     CE_CONFIG_BRANCH=${CE_CONFIG_BRANCH:-$BRANCH_NAME}

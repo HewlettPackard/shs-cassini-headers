@@ -1,6 +1,6 @@
 # Copyright 2021,2024 Hewlett Packard Enterprise Development LP
 Name:           cray-cassini-headers
-Version:        1.1.2
+Version:        2.0.0
 Release:        %(echo ${BUILD_METADATA})
 Summary:        Cassini Headers
 License:        Dual GPLv2/BSD
@@ -17,13 +17,7 @@ BuildArch:  noarch
 Provides:   cray-cassini-headers-core = %{version}-%{release}
 Obsoletes:  cray-cassini-headers-core < 1.0-SSHOT2.0.0_20220224145456_085d779
 %description user
-Cassini user headers
-
-%package -n cray-cassini-csr-defs
-Summary:    Cassini CSR definitions for PyCXI
-BuildArch:  noarch
-%description -n cray-cassini-csr-defs
-Cassini CSR definitions for PyCXI
+Cassini headers
 
 %prep
 %setup -q -n %{name}-%{version}
@@ -33,11 +27,12 @@ Cassini CSR definitions for PyCXI
 %install
 rm -rf %{buildroot}
 
-mkdir -p %{buildroot}/%{_includedir}
+mkdir -p %{buildroot}%{_includedir}
 cp -a %{_builddir}/%{name}-%{version}/include/* %{buildroot}/%{_includedir}/
+cp -a %{_builddir}/%{name}-%{version}/lib/casuc/* %{buildroot}/%{_includedir}/
+cp -a %{_builddir}/%{name}-%{version}/lib/craypldm/* %{buildroot}/%{_includedir}/
 
 mkdir -p %{buildroot}/%{_datadir}
-cp -a %{_builddir}/%{name}-%{version}/share/* %{buildroot}/%{_datadir}/
 
 %files user
 %{_includedir}/cxi_prov_hw.h
@@ -54,8 +49,7 @@ cp -a %{_builddir}/%{name}-%{version}/share/* %{buildroot}/%{_datadir}/
 %{_includedir}/cassini-telemetry-ethtool-names.h
 %{_includedir}/cassini-telemetry-sysfs-defs.h
 %{_includedir}/cassini-telemetry-test.h
-
-%files -n cray-cassini-csr-defs
-%{_datadir}/cassini-headers/csr_defs.json
+%{_includedir}/cuc_cxi.h
+%{_includedir}/pldm_cxi.h
 
 %changelog

@@ -32,7 +32,8 @@ cp -a %{_builddir}/%{name}-%{version}/include/* %{buildroot}/%{_includedir}/
 cp -a %{_builddir}/%{name}-%{version}/lib/casuc/* %{buildroot}/%{_includedir}/
 cp -a %{_builddir}/%{name}-%{version}/lib/craypldm/* %{buildroot}/%{_includedir}/
 
-mkdir -p %{buildroot}/%{_datadir}
+mkdir -p %{buildroot}/%{_datadir}/cassini-headers
+cp -a %{_builddir}/%{name}-%{version}/share/cassini-headers/* %{buildroot}/%{_datadir}/cassini-headers
 
 %files user
 %{_includedir}/cxi_prov_hw.h
@@ -51,5 +52,6 @@ mkdir -p %{buildroot}/%{_datadir}
 %{_includedir}/cassini-telemetry-test.h
 %{_includedir}/cuc_cxi.h
 %{_includedir}/pldm_cxi.h
+%{_datadir}/cassini-headers/csr_defs.json
 
 %changelog

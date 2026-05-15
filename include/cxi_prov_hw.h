@@ -11,6 +11,7 @@
 #ifndef __KERNEL__
 #include <stdbool.h>
 #include <errno.h>
+#include <string.h>
 #endif
 
 /*

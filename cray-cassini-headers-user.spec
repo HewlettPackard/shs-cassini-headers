@@ -16,6 +16,8 @@ Summary:    Cassini user headers
 BuildArch:  noarch
 Provides:   cray-cassini-headers-core = %{version}-%{release}
 Obsoletes:  cray-cassini-headers-core < 1.0-SSHOT2.0.0_20220224145456_085d779
+# Unversioned: cassini2-firmware-devel used a different version scheme.
+Obsoletes:  cassini2-firmware-devel
 %description user
 Cassini headers
 
